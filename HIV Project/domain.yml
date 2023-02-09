@@ -1,0 +1,199 @@
+version: "3.1"
+
+intents:
+  - greet
+  - menu1
+  - menu2
+  - menu3
+  - HIV_testing_opt1
+  - HIV_testing_opt2
+  - HIV_flow1_opt1
+  - HIV_flow1_opt2
+  - HIV_flow2_opt1
+  - HIV_flow2_opt2
+  - prep_flow1
+
+
+
+
+
+
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+
+responses:
+  utter_greet:
+  - text: "Hello! My name is XXX. I am here to help you with your HIV testing and prevention needs"
+
+  utter_menu:
+  - text: " Choose one of the options below or ask me a question
+            1. HIV Testing 🩸
+            2. PrEP 💊
+            3. Mental Health 👨🏻‍💼"
+
+OPTION 1
+
+  utter_HIV_testing:
+  - text: "Nice. I can help you with HIV testing. 
+           What would you like to know?
+           1. What is like to be tested for HIV
+           2. I want to get an HIV test"
+
+  utter_HIV_flow1:
+  - text: "Sure! HIV testing is an easy and important health prevention.
+           Getting tested for HIV is like any other test.
+           1. What are the benefits of testing
+           2. Should I be tested?"
+
+  utter_Hflow1.1:
+  - text: "Having your HIV status regularly checked is important to maintaining your overall health. Diagnosing HIV quickly and getting linked to treatment immediately are crucial to keep you healthy and protects your partners. Regular testing also give you the opportunity to adopt HIV prevention tools like PrEP"
+
+  utter_flow1.2:
+  - text: "Great question! Bot: Regular HIV testing is important to maintain your overall health. You should get tested if you have more than one sex partner, if you don't always use condoms, if you engage in chemsex, or are otherwise exposed to HIV "
+
+//  utter_flow1_jump:
+  - text: "Let's get you tested for HIV. How would you like to get tested?"
+
+
+  utter_HIV_flow2:
+  - text: "There are two way you can get tested. You can get tested at your home with an HIV self-testing kit, or you can get tested at the clinic. 
+           Which one would you 
+           1. Test at the clinic
+           2. Test at home"
+
+  utter_flow2.1:
+  - text: "Great choice! Let's find a clinic near you.
+          Enter your City name please"
+
+Continue
+
+  utter_flow2.2:
+  - text: "Self-testing is an easy way to test at home. Bot: I can deliever an HIV self-testing kit to your door! Or, if you want to learn about more self-testing, we can provid
+           1. I want to learn more about it
+           2. I want to order self-testing kits"
+
+Continue
+
+
+OPTION 2
+
+  utter_PrEP:
+  - text: "Let's talk about PrEP! Pre-exposure prophylaxis, or 'PrEP', is a daily medication you can take to prevent HIV. PrEP is a safe and effective HIV prevention choice.
+           How can I help you with PrEP today?
+           1. I am already on PrEP
+           2. I want to get PrEP
+           3. Tell me more about PrEP"
+
+  utter_PrEP_flow1:
+  - text: "Great! Continue taking PrEP. It will keep you safe"
+
+  utter_PrEP_flow2:
+  - text: "Smart choice! Let's find a PrEP clinic near you. First, I need to know which city you are in, then I can find the nearest clinic for you
+           Enter your city name!"
+
+  utter_flow2.1:
+  - text: "Oops! I did not find a clinic in your city. I did find a website called MyPeEPLocator. It is a nationa directory of clinics in Malaysia. Here is the link"
+
+  utter_flow2.1.1:
+  - text: "https://mypreplocator.com/
+           What else can I help you with?"
+
+  utter_flow2.2:
+  - text: " Gotcha! Here are all the clinics in "[the selected city name]". Would you like me to email the clinic list to you"
+
+continue
+
+  utter_PrEP_flow3:
+  - text: " I love telling people about PrEP. PrEP stands for Pre-Exposure Prophylaxis and it is a daily pill you can take to prevent HIV in people who are HIV negative. When taken every day, PrEP is more than 99% effective at preventing HIV. Pretty awesome right?
+             Would you like to explore more about PrEP
+             1. Yes, I want PrEP!
+             2. Yes, show me how PrEP work
+             3. Is PrEP is right for me?
+             4. How much does PrEP cost?"
+
+3.1jump(Utter_PrEP_flow2)
+
+  utter_flow3.2:
+  - text: "I'd love to! I really enjoy telling people about the science of PrEP. Bot: PrEP is made up of two different medicines called 'antiretrovirals' (that's a fancy word that doctors use to refer to HIV medication). When taken every day, PrEP blocks the HIV virus from infecting your body, if you are exposed to HIV"
+
+Continue
+
+  utter_flow3.3:
+  - text: "Great question! I'm a PrEP expert and I have been trained to help you decide if PrEP is right for you! PrEP is for people who are HIV negative but are at risk of HIV infection. I am going to ask you a list of questions to determine your HIV risk level. After you answer these questions, I'll be able to tell you if PrEP may be is right for you. Are you ready?"
+
+Continue
+
+
+  utter_flow3.4:
+  - text: "The price for PrEP varies depending on location. In general, the cost for the medication ranges from RM80 - RM160 per month. There are also some costs for the doctor?s consultation and blood test depending on the facilities you visited."
+
+Continue 
+ 
+OPTION 3
+
+
+  utter_mental_health:
+  - text: "Good choice! Mental health is an important part of our overall health. I recently started getting trained on mental health topics. I can screen you for depression and help you find a local mental health professional in your area. 
+           How can I help you 
+           1. Tell me more about Depression
+           2. I'd like to be screened for depression
+           3. Help me find a mental health counselor"
+
+
+  utter_health_flow1:
+  - text: "Depression is one of the most common mental health conditions in the world. Research suggests depression is caused by a combination of genetric, biological, environmental, and sycological factors. I am glad you are interested in getting screen for depression "
+
+  utter_flow1.1:
+  - text: " Although the symptoms vary from person to person, some of the most common symptoms of depression include: 
+          * Persistent feeling of sadness, anxiety, or 'empty'mood 
+          * Feelings of hopelessness
+          * Loss of interest or pleasure in hobbies and activities 
+          * Decreased energy or fatigue  
+          * Feelings of guilt, worthlessness, or helplessnes"
+
+  utter_flow1.2:
+  - text: " Not everyone who is depressed will experience every symptom. Some people experience only a few symptoms, while others may experience many. I have been trained to screen people for depression by asking them a few simple questions. 
+            Would you like to start the screening now?"
+
+Continue
+
+2jump(utter_flow1.2)
+
+  utter_flow3:
+  - text: " Happy to help you. Let's find a mental health counselor near you. Tell me which city you are in, then I can locate counselors in your area"
+
+
+  utter_flow3.1:
+  - text: " Oops! I did not find a counselor in that city either. Let me give you the website of a local organization, "Befriender", that maybe able to help locate a counselor in your area"
+
+Continue
+
+
+  utter_flow3.2:
+  - text: " I found some information! Would you like me to email the list to you? "
+
+Continue
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

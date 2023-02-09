@@ -1,0 +1,91 @@
+version: "3.1"
+
+stories:
+
+- story: start HIV1.1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: menu1
+  - action: utter_HIV_testing
+  - intent: HIV_testing_opt1
+  - action: utter_HIV_flow1
+  - intent: HIV_flow1_opt1
+  - action: utter_Hflow1.1
+
+- story: start HIV1.2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: menu1
+  - action: utter_HIV_testing
+  - intent: HIV_testing_opt1
+  - action: utter_HIV_flow1
+  - intent: HIV_flow1_opt2
+  - action: utter_Hflow1.2
+
+- story: start HIV2.1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: menu1
+  - action: utter_HIV_testing
+  - intent: HIV_testing_opt2
+  - action: utter_HIV_flow2
+  - intent: HIV_flow2_opt1
+  - action: utter_flow2.1
+
+- story: start HIV2.2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: menu1
+  - action: utter_HIV_testing
+  - intent: HIV_testing_opt2
+  - action: utter_HIV_flow2
+  - intent: HIV_flow2_opt1
+  - action: utter_flow2.2
+
+
+- story: start PrEP
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_menu
+  - intent: menu2
+  - action: utter_PrEP
+  - intent: prep_flow1
+  - action: utter_PrEP_flow1
+
+
+
+
+
+
+
+
+
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
